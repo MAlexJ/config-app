@@ -1,23 +1,11 @@
 # rootProject.name = 'spring-boot-heroku-config-app'
 
-server:
-  port: ${PORT:5000}
-  
-spring:
-  jackson:
-    serialization:
-      indent_output: true
-  application:
-    name: "heroku-scheduler-app"
-  zipkin:
-    baseUrl: ${ZIPKIN_PORT:http://127.0.0.1:9411}
-  data:
-    mongodb:
-      database: ${MONGODB_DATABASE}
-      uri: ${MONGODB_URI}
+scheduled:
+  task:
+    execute: true
+    job:
+      cron: */10 * * * * *
 
-scheduler:
-  enabled: ${SCHEDULER_ENABLED:true}
 
 management:
   endpoints:
