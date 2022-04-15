@@ -1,3 +1,5 @@
+# rootProject.name = 'spring-boot-heroku-config-app'
+
 spring:
   application:
     name: foo
